@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webformer TEST</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://jeremyckahn.github.io/keydrown/dist/keydrown.js"></script>
+    <script src="index_files/script.js"></script>
+    <link rel="stylesheet" href="index_files/style.css">
+</head>
+<body>
+    <button class="webformer_platform" onclick="test();">Click me!</button>
+    <div style="position:absolute;left:0px;top:100px;" class="webformer_platform">aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+    <div style="position:absolute;left:250px;top:250px;" class="webformer_platform">aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+    <div style="position:absolute;left:260px;top:170px;" class="webformer_platform">aaaaaaaaaaa</div>
+    <div style="position:absolute;left:500px;top:170px;" class="webformer_platform movingboi">aaaaaaaaaaa</div>
+    <script>
+        let t = 0;
+        let dir = -1;
+        setInterval(function(){
+            if (t%200==0){
+                dir *=-1;
+            }
+            $(".movingboi").css("left",(parseInt($(".movingboi").css("left"))+dir).toString()+'px');
+            t+=1;
+        },25)
+    </script>
+    <script src="index_files/webformer.js"></script>
+</body>
+</html>
